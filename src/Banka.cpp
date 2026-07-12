@@ -16,8 +16,8 @@ Hesap* Banka::hesapBul(int id){
     return nullptr;
 }
 bool Banka::havaleYap(int gonderenId,int alanId,double miktar){
-    Hesap gönderen=hesapBul(gonderenId);
-    Hesap alan=hesapBul(alanId);
+    Hesap* gonderen=hesapBul(gonderenId);
+    Hesap* alan=hesapBul(alanId);
     if(gonderen==nullptr || alan==nullptr){
         return false;
     }
